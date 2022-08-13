@@ -46,7 +46,7 @@ namespace NetCoreServer
                 .AddServiceEndpoint<EchoService, IEchoService>(new WSHttpBinding(SecurityMode.Transport), "/wsHttp")
 
                 // Add NetTcpBinding
-                .AddServiceEndpoint<EchoService, IEchoService>(new NetTcpBinding(), $"net.tcp://localhost:{NETTCP_PORT}/netTcp");
+                .AddServiceEndpoint<EchoService, IEchoService>(new NetTcpBinding(), $"net.tcp://localhost:{NETTCP_PORT}/EchoService/netTcp");
 
 
                 // Configure WSDL to be available over http & https
